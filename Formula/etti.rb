@@ -3,12 +3,11 @@ class Etti < Formula
   desc "Experimental coding assistant"
   homepage "https://github.com/open-assistants-lab/homebrew-coding"
   url "https://github.com/open-assistants-lab/homebrew-coding/releases/download/v0.1.0/etti-0.1.0-a5212027e56b-macos-arm64.tar.gz"
-  version "0.1.0"
   sha256 "a1be9263130a4be7f253c4c06be9c491cf9693efaf31d6d9613cb6b6ec692bce"
   license :cannot_represent
 
-  depends_on macos: :sonoma
   depends_on arch: :arm64
+  depends_on macos: :sonoma
 
   def install
     bin.install "etti"
