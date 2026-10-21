@@ -2,8 +2,8 @@
 class Etti < Formula
   desc "Experimental coding assistant"
   homepage "https://github.com/open-assistants-lab/homebrew-coding"
-  url "https://github.com/open-assistants-lab/homebrew-coding/releases/download/v0.1.0/etti-0.1.0-a5212027e56b-macos-arm64.tar.gz"
-  sha256 "a1be9263130a4be7f253c4c06be9c491cf9693efaf31d6d9613cb6b6ec692bce"
+  url "https://github.com/open-assistants-lab/homebrew-coding/releases/download/v0.1.1/etti-0.1.1-abedb524cd3e-macos-arm64.tar.gz"
+  sha256 "2f1b06921f17e979410ebff8515aa2d394d6bd4f0b2dd92e4b9253e59bd4a4a8"
   license :cannot_represent
 
   depends_on arch: :arm64
