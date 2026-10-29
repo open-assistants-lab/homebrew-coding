@@ -2,8 +2,8 @@
 class Etti < Formula
   desc "Experimental coding assistant"
   homepage "https://github.com/open-assistants-lab/homebrew-coding"
-  url "https://github.com/open-assistants-lab/homebrew-coding/releases/download/v0.1.3/etti-0.1.3-596959e59a70-macos-arm64.tar.gz"
-  sha256 "76ce2deaf094bd627b1f6e8b7e9e580e88d59a7c8af2d50fd758593f098effef"
+  url "https://github.com/open-assistants-lab/homebrew-coding/releases/download/v0.1.4/etti-0.1.4-c5e644f9db95-macos-arm64.tar.gz"
+  sha256 "0758d38a708c4343457b667429d119adce6480c704abed1369747cad6ceabbc0"
   license :cannot_represent
 
   depends_on arch: :arm64
@@ -19,7 +19,8 @@ class Etti < Formula
       Experimental. Run `etti setup` explicitly to store your Ollama Cloud key.
       Setup stores locally; it does not authenticate the key or start inference.
       Tools share your OS user. Cloud coding requires Internet and can incur charges.
-      Use a separate --state-dir for another project. Upgrades may need Keychain reauthorization.
+      Each project folder selects its own history; plain launches start fresh sessions.
+      Setup writes private, unencrypted auth.json. No Keychain access or automatic migration.
       Keys and conversation stores are not deleted by uninstall.
     EOS
   end
