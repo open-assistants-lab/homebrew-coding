@@ -1,13 +1,21 @@
-# Generated from an exact local archive; publish only after release approval/gates.
+# Generated from two reopened exact-source archives; publication requires exact-set approval.
 class Etti < Formula
   desc "Experimental coding assistant"
   homepage "https://github.com/open-assistants-lab/homebrew-coding"
-  url "https://github.com/open-assistants-lab/homebrew-coding/releases/download/v0.1.7/etti-0.1.7-c386f71994e4-macos-arm64.tar.gz"
-  sha256 "c16ef5e98b9223b6d86e44598808702828b69e2088a14ae7859f225cd9437043"
   license :cannot_represent
 
-  depends_on arch: :arm64
-  depends_on macos: :sonoma
+  on_macos do
+    depends_on arch: :arm64
+    depends_on macos: :sonoma
+    url "https://github.com/open-assistants-lab/homebrew-coding/releases/download/v0.1.8/etti-0.1.8-02076a48d0e9-macos-arm64.tar.gz"
+    sha256 "c70e591dd0dde485f364efac8bfee7de824781ff82b0272d3c81b57aeae7280e"
+  end
+
+  on_linux do
+    depends_on arch: :x86_64
+    url "https://github.com/open-assistants-lab/homebrew-coding/releases/download/v0.1.8/etti-0.1.8-02076a48d0e9-linux-x86_64-musl.tar.gz"
+    sha256 "8829f474b55287d10d4802c298f39bf41c2fb61930b9ad312dde443a4b57bf67"
+  end
 
   def install
     bin.install "etti"
