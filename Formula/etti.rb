@@ -7,14 +7,14 @@ class Etti < Formula
   on_macos do
     depends_on arch: :arm64
     depends_on macos: :sonoma
-    url "https://github.com/open-assistants-lab/homebrew-coding/releases/download/v0.1.11/etti-0.1.11-aa93aec5a9a1-macos-arm64.tar.gz"
-    sha256 "7515172e0bd0d7cb79adc296c25ee6f9675e209ee278c06139c6f9d11eb9f48f"
+    url "https://github.com/open-assistants-lab/homebrew-coding/releases/download/v0.1.12/etti-0.1.12-0ed3d1e159c9-macos-arm64.tar.gz"
+    sha256 "2a01cf36dc1413d448bce5e179a8904deddc9764bf529f8d9aa6f75dd14b20d6"
   end
 
   on_linux do
     depends_on arch: :x86_64
-    url "https://github.com/open-assistants-lab/homebrew-coding/releases/download/v0.1.11/etti-0.1.11-aa93aec5a9a1-linux-x86_64-musl.tar.gz"
-    sha256 "1661cd8fa18fc4f454b0a2f04f7e6539cf64fd38a756991744a47803d83d6ef0"
+    url "https://github.com/open-assistants-lab/homebrew-coding/releases/download/v0.1.12/etti-0.1.12-0ed3d1e159c9-linux-x86_64-musl.tar.gz"
+    sha256 "f9c878e985d15603927feb07d52a359c2141c875d9a89d912b07a3280ee51b34"
   end
 
   def install
@@ -32,10 +32,11 @@ class Etti < Formula
       either is refused by name. Only local odograph export remains; it is on by default and
       does nothing unless a local odograph advertises itself at
       $XDG_DATA_HOME/odograph/advertise.json or ~/.local/share/odograph/advertise.json.
-      Stores: a DuckDB 1.5.6 store (Etti 0.1.7-0.1.9) is refused as store_format before it opens.
+      Stores: this release stores in SQLite. A store written by an earlier release (Etti
+      0.1.7-0.1.11, DuckDB) is refused as store_format before it opens.
       There is no migration or read-old path, and the store is never deleted or rewritten.
       Start a fresh state directory only deliberately, or restore a pre-cutover backup taken
-      before the cut and open that copy with the earlier 0.1.7-0.1.9 release that wrote it.
+      before the cut and open that copy with the earlier release that wrote it.
       Tools share your OS user. Cloud coding requires Internet and can incur charges.
       Each project folder selects its own history; plain launches start fresh sessions.
       Keys, configuration and conversation stores are not erased by uninstall.
