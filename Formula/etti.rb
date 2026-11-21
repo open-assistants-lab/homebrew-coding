@@ -4,17 +4,19 @@ class Etti < Formula
   homepage "https://github.com/open-assistants-lab/homebrew-coding"
   license "MIT"
 
+  depends_on "open-assistants-lab/telemetry/odograph"
+
   on_macos do
     depends_on arch: :arm64
     depends_on macos: :sonoma
-    url "https://github.com/open-assistants-lab/homebrew-coding/releases/download/v0.1.12/etti-0.1.12-0ed3d1e159c9-macos-arm64.tar.gz"
-    sha256 "2a01cf36dc1413d448bce5e179a8904deddc9764bf529f8d9aa6f75dd14b20d6"
+    url "https://github.com/open-assistants-lab/homebrew-coding/releases/download/v0.1.13/etti-0.1.13-de7e0d3830c9-macos-arm64.tar.gz"
+    sha256 "40cd597ed1ba8637d6ed86747958388e5c796949b1b0f7a94f3379d2e521a460"
   end
 
   on_linux do
     depends_on arch: :x86_64
-    url "https://github.com/open-assistants-lab/homebrew-coding/releases/download/v0.1.12/etti-0.1.12-0ed3d1e159c9-linux-x86_64-musl.tar.gz"
-    sha256 "f9c878e985d15603927feb07d52a359c2141c875d9a89d912b07a3280ee51b34"
+    url "https://github.com/open-assistants-lab/homebrew-coding/releases/download/v0.1.13/etti-0.1.13-de7e0d3830c9-linux-x86_64-musl.tar.gz"
+    sha256 "4f821abd0fe26eb386acda166bdf747a6bbc44dc95175d3551f8eab6c072c0d6"
   end
 
   def install
