@@ -9,14 +9,14 @@ class Etti < Formula
   on_macos do
     depends_on arch: :arm64
     depends_on macos: :sonoma
-    url "https://github.com/open-assistants-lab/homebrew-coding/releases/download/v0.1.13/etti-0.1.13-de7e0d3830c9-macos-arm64.tar.gz"
-    sha256 "40cd597ed1ba8637d6ed86747958388e5c796949b1b0f7a94f3379d2e521a460"
+    url "https://github.com/open-assistants-lab/homebrew-coding/releases/download/v0.1.14/etti-0.1.14-7577af9822c6-macos-arm64.tar.gz"
+    sha256 "49c3e08b4538746d3a933ded76da3c9b374c35ba1dfa74985b4f1a3cc40a8b12"
   end
 
   on_linux do
     depends_on arch: :x86_64
-    url "https://github.com/open-assistants-lab/homebrew-coding/releases/download/v0.1.13/etti-0.1.13-de7e0d3830c9-linux-x86_64-musl.tar.gz"
-    sha256 "4f821abd0fe26eb386acda166bdf747a6bbc44dc95175d3551f8eab6c072c0d6"
+    url "https://github.com/open-assistants-lab/homebrew-coding/releases/download/v0.1.14/etti-0.1.14-7577af9822c6-linux-x86_64-musl.tar.gz"
+    sha256 "ce5c09745095dbfd0db332b3e0e7118bea6b6c51dbc126e4ea7b57a83691bf56"
   end
 
   def install
