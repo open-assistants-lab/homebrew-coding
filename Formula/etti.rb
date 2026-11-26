@@ -4,19 +4,19 @@ class Etti < Formula
   homepage "https://github.com/open-assistants-lab/homebrew-coding"
   license "MIT"
 
-  depends_on "open-assistants-lab/telemetry/odograph"
+  depends_on "open-assistants-lab/telemetry/runwatch"
 
   on_macos do
     depends_on arch: :arm64
     depends_on macos: :sonoma
-    url "https://github.com/open-assistants-lab/homebrew-coding/releases/download/v0.1.14/etti-0.1.14-7577af9822c6-macos-arm64.tar.gz"
-    sha256 "49c3e08b4538746d3a933ded76da3c9b374c35ba1dfa74985b4f1a3cc40a8b12"
+    url "https://github.com/open-assistants-lab/homebrew-coding/releases/download/v0.1.15/etti-0.1.15-cf0e039b92cd-macos-arm64.tar.gz"
+    sha256 "185cb71bc9cb6aa7591756d1eb007b5381997c3d126eef52c45a5036a71f7d4b"
   end
 
   on_linux do
     depends_on arch: :x86_64
-    url "https://github.com/open-assistants-lab/homebrew-coding/releases/download/v0.1.14/etti-0.1.14-7577af9822c6-linux-x86_64-musl.tar.gz"
-    sha256 "ce5c09745095dbfd0db332b3e0e7118bea6b6c51dbc126e4ea7b57a83691bf56"
+    url "https://github.com/open-assistants-lab/homebrew-coding/releases/download/v0.1.15/etti-0.1.15-cf0e039b92cd-linux-x86_64-musl.tar.gz"
+    sha256 "1e677651649032060a6f9bc9067c0545243ea4f4d4cff16d4901454dce53f8f1"
   end
 
   def install
@@ -31,9 +31,9 @@ class Etti < Formula
       Setup stores locally in private, unencrypted auth.json; it does not authenticate the key
       or start inference. No Keychain access or automatic migration.
       Telemetry: the Langfuse and ClickStack targets are removed, and a leftover config naming
-      either is refused by name. Only local odograph export remains; it is on by default and
-      does nothing unless a local odograph advertises itself at
-      $XDG_DATA_HOME/odograph/advertise.json or ~/.local/share/odograph/advertise.json.
+      either is refused by name. Only local runwatch export remains; it is on by default and
+      does nothing unless a local runwatch advertises itself at
+      $XDG_DATA_HOME/runwatch/advertise.json or ~/.local/share/runwatch/advertise.json.
       Stores: this release stores in SQLite. A store written by an earlier release (Etti
       0.1.7-0.1.11, DuckDB) is refused as store_format before it opens.
       There is no migration or read-old path, and the store is never deleted or rewritten.
